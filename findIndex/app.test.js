@@ -22,11 +22,12 @@ describe("#removeUser", function () {
     { username: "msmith" },
   ];
 
-  it("remove the object from the array and return this object", function () {
-    expect(removeUser(users, "akagen")).teEqual({ username: "akagen" });
+  it("returns the removed user", function() {
+    expect(removeUser(users,"mlewis")).toEqual({ username: "mlewis" });
   });
-  it("returns undefined a user from an array", function () {
+  it("returns undefined a user from an array", function() {
     expect(removeUser(users, "taco")).toEqual(undefined);
     expect(users.length).toEqual(3);
+
   });
 });

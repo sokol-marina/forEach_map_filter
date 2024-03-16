@@ -9,5 +9,5 @@ function removeUser(arr, username) {
   });
   if (foundIndex === -1) return;
 
-  return usersArray.splice(foundIndex, 1)[0];
+  return arr.splice(foundIndex, 1)[0];
 }
