@@ -1,18 +1,37 @@
-// function filterOutOdds() {
-//   var nums = Array.prototype.slice.call(arguments);
-//   return nums.filter(function (num) {
-//     return num % 2 === 0;
-//   });
-// }
+function createInstructor1(firstName, lastName) {
+  return {
+    firstName: firstName,
+    lastName: lastName,
+  };
+}
 
-const filterOutOdds = (...num) => num.filter((v) => v % 2 === 0);
+function createInstructor(firstName, lastName) {
+  return { firstName, lastName };
+}
 
-//findMin
-const findMin = (...nums) => Math.min(...nums)
-//mergeObjects
-const mergeObjects = (obj1, obj2) => ({...obj1, ...obj2})
+let favoriteNumber = 42;
 
-//doubleAndReturnArgs
-const doubleAndReturnArgs = (arr, ...args) => [...arr, ...args.map(v => v *2)]
+const instructor = {
+  firstName: "Colt",
+  [favoriteNumber]: "That is my favorite!",
+};
 
-//Slice and Dice
+const instructor1 = {
+  firstName: "Colt",
+  sayHi() {
+    return "Hi!";
+  },
+  sayBye() {
+    return this.firstName + " says bye!";
+  },
+};
+
+
+function createAnimal(species, verb, noise) {
+  return {
+    species,
+    [verb]() {
+      return noise;
+    },
+  };
+}
